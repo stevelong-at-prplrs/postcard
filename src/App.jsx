@@ -3,14 +3,14 @@ import './App.css';
 import { methodArr } from './utils';
 
 function App() {
-  const [requests, setRequests] = React.useState([]);
+  const [responses, setResponses] = React.useState([]);
   const [endpoint, setEndpoint] = React.useState('testpath');
   const [selectedMethod, setSelectedMethod] = React.useState(methodArr[0]); // Initialize with the first method
 
   const handleRequestSubmit = () => {
     fetch(`/api/${endpoint}`, { method: selectedMethod })
       .then(response => response.text())
-      .then(responseText => setRequests([...requests, responseText]));
+      .then(responseText => setResponses([...responses, responseText]));
   };
 
   return (
@@ -38,14 +38,16 @@ function App() {
           onChange={e => setEndpoint(e.target.value || 'testpath')}
         />
         <button onClick={handleRequestSubmit}>Submit Request</button>
-        <button onClick={() => setRequests([])}>Clear log</button>
+        <button onClick={() => setResponses([])}>Clear log</button>
       </div>
       <h2>Response log</h2>
-      <section className='logwindow'>
-        {requests.map((row, ind) => (
-          <span key={ind}>{row}</span>
-        ))}
-      </section>
+      <div className='logwindow'>
+        <div className='logwindow--inner'>
+          {responses.map((row, ind) => (
+            <span key={ind}>{row}</span>
+          ))}
+        </div>
+      </div>
     </>
   );
 }

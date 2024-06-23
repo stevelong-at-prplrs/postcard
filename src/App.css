@@ -5,25 +5,23 @@
   text-align: center;
 }
 
-.logwindow {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background-color: black;
-  height: 40vh;
-  overflow: hidden;
-  padding: 1rem;
-  margin: 1rem auto;
-  border-color: white;
-  border-style: solid;
-  border-width: 1px;
-  span {
-    text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+div.logwindow > div.logwindow--inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: black;
+    height: 40vh;
+    overflow: scroll;
+    padding: 1rem;
+    margin: 1rem auto;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    span {
+      text-align: left;
+      white-space: nowrap;
+    }
 }
 
 .requestbuttons {
