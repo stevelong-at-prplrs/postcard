@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -7,7 +7,7 @@
 
 div.logwindow > div.logwindow--inner {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-start;
     justify-content: flex-start;
     background-color: black;
@@ -21,5 +21,19 @@ div.logwindow > div.logwindow--inner {
     span {
       text-align: left;
       white-space: nowrap;
+      font-family: monospace;
+      font-weight: normal;
     }
+    :first-child {
+      font-weight: bold;
+    }
+}
+
+div.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  align-items: baseline;
+
 }
