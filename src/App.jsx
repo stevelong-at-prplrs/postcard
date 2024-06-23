@@ -10,14 +10,14 @@ function App() {
   const handleRequestSubmit = () => {
     fetch(`/api/${endpoint}`, { method: selectedMethod })
       .then(response => response.text())
-      .then(responseText => setResponses([...responses, responseText]));
+      .then(responseText => setResponses([responseText, ...responses]));
   };
 
   return (
     <>
       <h2>Generate Requests with</h2>
       <h1>PostCard</h1>
-      <div>
+      <div className='controls'>
       <label htmlFor='methodSelect'>Method:</label>
         <select
           id='methodSelect'
