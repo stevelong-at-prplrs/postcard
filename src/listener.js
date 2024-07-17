@@ -1,7 +1,7 @@
-import { BS } from 'mod-pkg';
+import { Wayne } from 'wayne';
 import { genResponse, serverListen, methodArr } from './utils';
 
-const app = new BS();
+const app = new Wayne();
 
 serverListen(methodArr, app, method => async (req, res) => {
     try {

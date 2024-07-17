@@ -15,7 +15,7 @@ export default defineConfig({
           minify: true,
           bundle: true,
           entryPoints: [join(process.cwd(), "src", "listener.js")],
-          outfile: join(process.cwd(), "dist", "bundle.js"),
+          outfile: join(process.cwd(), "dist", "listener.js"),
         });
       },
     },
