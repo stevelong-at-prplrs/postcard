@@ -12,6 +12,7 @@
     "serve-static": "http-server -p 3000 ./dist/"
   },
   "dependencies": {
+    "@jcubic/wayne": "^0.16.5",
     "express": "^4.19.2",
     "http-server": "^14.1.1",
     "register-service-worker": "^1.7.2",

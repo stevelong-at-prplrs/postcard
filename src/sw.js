@@ -1,4 +1,5 @@
-import { Wayne } from 'wayne';
+// import { Wayne } from 'wayne';
+import { Wayne } from '@jcubic/wayne';
 import { genResponse, serverListen, methodArr } from './utils';
 
 const app = new Wayne();

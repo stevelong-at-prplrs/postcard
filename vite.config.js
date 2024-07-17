@@ -14,8 +14,8 @@ export default defineConfig({
         buildSync({
           minify: true,
           bundle: true,
-          entryPoints: [join(process.cwd(), "src", "listener.js")],
-          outfile: join(process.cwd(), "dist", "listener.js"),
+          entryPoints: [join(process.cwd(), "src", "sw.js")],
+          outfile: join(process.cwd(), "dist", "sw.js"),
         });
       },
     },
